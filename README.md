@@ -30,20 +30,19 @@ It lists every topic with a question-count breakdown and a visual difficulty bar
 
 ## 📂 Topic Pages
 
-| # | Topic | Beginner | Intermediate | Advanced | Expert | Quick-Fire | Scenarios | Total |
-|---|---|---|---|---|---|---|---|---|
-| 1 | [SharePoint](./topics/01-sharepoint.md) | 7 | 8 | 5 | 4 | 10 | 4 | **38** |
-| 2 | [SPFx](./topics/02-spfx.md) | 6 | 7 | 5 | 4 | 10 | 4 | **36** |
-| 3 | [Power Apps – Canvas Apps](./topics/03-power-apps-canvas.md) | 6 | 7 | 4 | 4 | 10 | 4 | **35** |
-| 4 | [Power Apps – Model-Driven & Dataverse](./topics/04-power-apps-model-driven.md) | 6 | 7 | 5 | 4 | 10 | 4 | **36** |
-| 5 | [Power Automate – Cloud Flows](./topics/05-power-automate-cloud.md) | 6 | 7 | 4 | 4 | 10 | 4 | **35** |
-| 6 | [Power Automate – Desktop (RPA)](./topics/06-power-automate-desktop.md) | 5 | 6 | 4 | 3 | 10 | 4 | **32** |
-| 7 | [AI Builder](./topics/07-ai-builder.md) | 5 | 5 | 3 | 3 | 10 | 3 | **29** |
-| 8 | [Copilot / Copilot Studio](./topics/08-copilot-studio.md) | 5 | 5 | 4 | 3 | 10 | 3 | **30** |
-| 9 | [Power Pages](./topics/09-power-pages.md) | 5 | 5 | 4 | 3 | 10 | 3 | **30** |
-| 10 | [Power BI](./topics/10-power-bi.md) | 6 | 7 | 4 | 3 | 10 | 4 | **34** |
-| 11 | [Scenario-Based (Cross-Topic)](./topics/11-scenario-based.md) | — | — | — | — | — | 18 | **18** |
-| | **Total** | **57** | **64** | **42** | **35** | **100** | **55** | **353** |
+| # | Topic |
+|---|---|
+| 1 | [SharePoint](./topics/01-sharepoint.md) |
+| 2 | [SPFx](./topics/02-spfx.md) |
+| 3 | [Power Apps – Canvas Apps](./topics/03-power-apps-canvas.md) |
+| 4 | [Power Apps – Model-Driven & Dataverse](./topics/04-power-apps-model-driven.md) |
+| 5 | [Power Automate – Cloud Flows](./topics/05-power-automate-cloud.md) |
+| 6 | [Power Automate – Desktop (RPA)](./topics/06-power-automate-desktop.md) |
+| 7 | [AI Builder](./topics/07-ai-builder.md) |
+| 8 | [Copilot / Copilot Studio](./topics/08-copilot-studio.md) |
+| 9 | [Power Pages](./topics/09-power-pages.md) |
+| 10 | [Power BI](./topics/10-power-bi.md) |
+| 11 | [Scenario-Based (Cross-Topic)](./topics/11-scenario-based.md) |
 
 ## 🎯 Who This Is For
 
