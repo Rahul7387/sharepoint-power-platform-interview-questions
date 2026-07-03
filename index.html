@@ -313,8 +313,6 @@
 </div>
 
 <script>
-const REPO = "https://github.com/Rahul7387/sharepoint-power-platform-interview-questions/blob/main/topics/";
-
 // counts: [beginner, intermediate, advanced, expert, quickfire, scenario]
 const topics = [
   { n:"01", file:"01-sharepoint.md", title:"SharePoint", desc:"Architecture, admin, governance, and out-of-box customization.", counts:[7,8,5,4,10,4] },
@@ -344,8 +342,9 @@ function totalOf(counts){ return counts.reduce((x,y)=>x+y,0); }
 
 function cardHTML(t, isScenario){
   const bar = isScenario ? '' : `<div class="diff-bar">${renderBar(t.counts)}</div>`;
+  const basename = t.file.replace('.md', '');
   return `
-    <a class="card${isScenario ? ' scenario' : ''}" href="${REPO}${t.file}" target="_blank" rel="noopener">
+    <a class="card${isScenario ? ' scenario' : ''}" href="topic.html?t=${basename}">
       <div class="card-top">
         <span class="card-index">${t.n} /</span>
         <span class="card-count">${totalOf(t.counts)} questions</span>
