@@ -1,10 +1,11 @@
 # SharePoint & Power Platform Interview Questions
 
 🔗 **Repository:** https://github.com/Rahul7387/sharepoint-power-platform-interview-questions
+🌐 **Web Index (open in browser):** https://rahul7387.github.io/sharepoint-power-platform-interview-questions/
 
 ## 📌 Description
 
-A curated collection of **intermediate-to-expert level interview questions and answers** covering the full **Microsoft SharePoint & Power Platform** stack:
+A curated collection of **353 interview questions and answers**, tiered from **Beginner → Intermediate → Advanced → Expert**, covering the full **Microsoft SharePoint & Power Platform** stack:
 
 - **SharePoint Online** (Administration, Architecture & Customization)
 - **SPFx** (SharePoint Framework)
@@ -16,35 +17,43 @@ A curated collection of **intermediate-to-expert level interview questions and a
 - **Power BI**
 - **Scenario-Based / Real-World Questions** spanning multiple technologies
 
+Every topic has its own page, organized into difficulty tiers plus a **Quick-Fire round** (short, direct Q&A) and a **Scenario-Based section** (practical, real-world design/troubleshooting problems specific to that topic). A dedicated **cross-topic scenario page** covers 18 additional architect-level problems that span multiple technologies at once.
+
 This resource is designed for developers, consultants, and architects preparing for technical interviews, as well as interviewers looking to assess candidates at a deeper, practical level — going beyond textbook definitions into real design trade-offs, performance, security, and ALM considerations.
 
-## 📂 What's Inside
+## 🌐 Open the Web Index
 
-👉 See [`INTERVIEW_QUESTIONS.md`](./INTERVIEW_QUESTIONS.md) for the full set of 100+ questions and detailed answers, organized by topic with a clickable table of contents.
+The easiest way to browse this repo is the web index page:
+👉 **https://rahul7387.github.io/sharepoint-power-platform-interview-questions/**
 
-| Section | Topics Covered |
-|---|---|
-| 1 | SharePoint Online — Admin, Architecture, Customization |
-| 2 | SPFx — Web Parts, Extensions, ALM, Performance |
-| 3 | Power Apps — Canvas Apps (delegation, formulas, offline, components) |
-| 4 | Power Apps — Model-Driven Apps & Dataverse (security, plugins, solutions) |
-| 5 | Power Automate — Cloud Flows (error handling, licensing, approvals) |
-| 6 | Power Automate — Desktop / RPA (selectors, attended/unattended) |
-| 7 | AI Builder (prebuilt & custom models, credits) |
-| 8 | Copilot / Copilot Studio (topics, generative answers, actions, governance) |
-| 9 | Power Pages (authentication, table permissions, security) |
-| 10 | Power BI (DAX, data modeling, RLS, gateways, ALM) |
-| 11 | Scenario-Based Questions (cross-topic, real-world design problems) |
+It lists every topic with a question-count breakdown and a visual difficulty bar, linking straight to each topic's page. You can also open [`index.html`](./index.html) directly in this repo.
+
+## 📂 Topic Pages
+
+| # | Topic | Beginner | Intermediate | Advanced | Expert | Quick-Fire | Scenarios | Total |
+|---|---|---|---|---|---|---|---|---|
+| 1 | [SharePoint](./topics/01-sharepoint.md) | 7 | 8 | 5 | 4 | 10 | 4 | **38** |
+| 2 | [SPFx](./topics/02-spfx.md) | 6 | 7 | 5 | 4 | 10 | 4 | **36** |
+| 3 | [Power Apps – Canvas Apps](./topics/03-power-apps-canvas.md) | 6 | 7 | 4 | 4 | 10 | 4 | **35** |
+| 4 | [Power Apps – Model-Driven & Dataverse](./topics/04-power-apps-model-driven.md) | 6 | 7 | 5 | 4 | 10 | 4 | **36** |
+| 5 | [Power Automate – Cloud Flows](./topics/05-power-automate-cloud.md) | 6 | 7 | 4 | 4 | 10 | 4 | **35** |
+| 6 | [Power Automate – Desktop (RPA)](./topics/06-power-automate-desktop.md) | 5 | 6 | 4 | 3 | 10 | 4 | **32** |
+| 7 | [AI Builder](./topics/07-ai-builder.md) | 5 | 5 | 3 | 3 | 10 | 3 | **29** |
+| 8 | [Copilot / Copilot Studio](./topics/08-copilot-studio.md) | 5 | 5 | 4 | 3 | 10 | 3 | **30** |
+| 9 | [Power Pages](./topics/09-power-pages.md) | 5 | 5 | 4 | 3 | 10 | 3 | **30** |
+| 10 | [Power BI](./topics/10-power-bi.md) | 6 | 7 | 4 | 3 | 10 | 4 | **34** |
+| 11 | [Scenario-Based (Cross-Topic)](./topics/11-scenario-based.md) | — | — | — | — | — | 18 | **18** |
+| | **Total** | **57** | **64** | **42** | **35** | **100** | **55** | **353** |
 
 ## 🎯 Who This Is For
 
 - Job seekers preparing for SharePoint / Power Platform Developer, Consultant, or Architect roles
-- Interviewers building a structured, practical question bank
+- Interviewers building a structured, leveled question bank (know exactly which tier to pull from)
 - Anyone leveling up their understanding of enterprise Microsoft 365 low-code/pro-code development
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you have a great question (with a solid answer) to add, feel free to open a pull request or raise an issue.
+Contributions are welcome! If you have a great question (with a solid answer) to add — at any difficulty tier — feel free to open a pull request or raise an issue.
 
 ## 📄 License
 

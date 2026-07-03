@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SharePoint &amp; Power Platform — Interview Question Bank</title>
+<meta name="description" content="353 intermediate-to-expert interview questions across SharePoint, SPFx, Power Apps, Power Automate, AI Builder, Copilot Studio, Power Pages, and Power BI, tiered by difficulty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e14;
+    --surface:#111823;
+    --surface-hover:#151f2d;
+    --border:#232f3d;
+    --border-bright:#324357;
+    --text:#e7edf4;
+    --text-muted:#8b9bad;
+    --text-dim:#5c6b7d;
+    --accent:#35d0ba;
+    --accent-soft:rgba(53,208,186,0.12);
+    --beginner:#4ade80;
+    --intermediate:#5b9dfc;
+    --advanced:#f5a623;
+    --expert:#f2685c;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --sans:'Inter', -apple-system, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(53,208,186,0.10), transparent 60%),
+      radial-gradient(ellipse 700px 500px at 100% 0%, rgba(91,157,252,0.08), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header.hero{
+    padding:72px 0 48px;
+    border-bottom:1px solid var(--border);
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 4px var(--accent-soft);
+  }
+  h1{
+    font-family:var(--mono);
+    font-weight:700;
+    font-size:clamp(28px, 4.6vw, 46px);
+    line-height:1.12;
+    margin:0 0 18px;
+    letter-spacing:-0.01em;
+  }
+  h1 .dim{color:var(--text-dim);}
+  .lede{
+    font-size:17px;
+    color:var(--text-muted);
+    max-width:640px;
+    margin:0 0 34px;
+  }
+  .lede strong{color:var(--text); font-weight:600;}
+
+  .stat-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    border:1px solid var(--border);
+    border-radius:12px;
+    overflow:hidden;
+    background:var(--surface);
+  }
+  .stat{
+    flex:1 1 140px;
+    padding:18px 22px;
+    border-right:1px solid var(--border);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{
+    font-family:var(--mono);
+    font-weight:700;
+    font-size:26px;
+    display:block;
+  }
+  .stat .label{
+    font-size:12px;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-top:4px;
+    display:block;
+  }
+  .stat.beginner .num{color:var(--beginner);}
+  .stat.intermediate .num{color:var(--intermediate);}
+  .stat.advanced .num{color:var(--advanced);}
+  .stat.expert .num{color:var(--expert);}
+
+  /* ---------- Legend ---------- */
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    padding:20px 0 8px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--text-muted);
+  }
+  .legend span{display:flex; align-items:center; gap:7px;}
+  .legend i{width:10px;height:10px;border-radius:3px; display:inline-block;}
+  .legend .b{background:var(--beginner);}
+  .legend .i{background:var(--intermediate);}
+  .legend .a{background:var(--advanced);}
+  .legend .e{background:var(--expert);}
+
+  /* ---------- Topic grid ---------- */
+  section.grid-section{padding:44px 0 80px;}
+  .section-title{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    margin:0 0 20px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:16px;
+  }
+  .card{
+    display:block;
+    text-decoration:none;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:22px 22px 20px;
+    transition:transform .16s ease, border-color .16s ease, background .16s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    border-color:var(--border-bright);
+    background:var(--surface-hover);
+  }
+  .card:hover .card-title{color:var(--accent);}
+  .card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:14px;
+  }
+  .card-index{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--text-dim);
+    letter-spacing:0.05em;
+  }
+  .card-count{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--text-muted);
+    background:rgba(255,255,255,0.04);
+    border:1px solid var(--border);
+    padding:3px 9px;
+    border-radius:20px;
+    white-space:nowrap;
+  }
+  .card-title{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:17px;
+    margin:0 0 8px;
+    color:var(--text);
+    transition:color .16s ease;
+  }
+  .card-desc{
+    font-size:13.5px;
+    color:var(--text-muted);
+    margin:0 0 18px;
+    line-height:1.55;
+    min-height:40px;
+  }
+  .diff-bar{
+    display:flex;
+    width:100%;
+    height:6px;
+    border-radius:4px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.05);
+    margin-bottom:8px;
+  }
+  .diff-bar span{height:100%;}
+  .diff-bar .b{background:var(--beginner);}
+  .diff-bar .i{background:var(--intermediate);}
+  .diff-bar .a{background:var(--advanced);}
+  .diff-bar .e{background:var(--expert);}
+  .card-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--text-dim);
+  }
+  .card-footer .go{
+    color:var(--accent);
+    opacity:0;
+    transform:translateX(-4px);
+    transition:all .16s ease;
+  }
+  .card:hover .card-footer .go{opacity:1; transform:translateX(0);}
+
+  .card.scenario{
+    grid-column:1 / -1;
+    background:linear-gradient(135deg, rgba(53,208,186,0.07), rgba(91,157,252,0.05));
+    border-color:rgba(53,208,186,0.25);
+  }
+  .card.scenario:hover{border-color:var(--accent);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--border);
+    padding:32px 0 56px;
+    color:var(--text-dim);
+    font-size:13px;
+  }
+  footer .foot-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 24px;
+    justify-content:space-between;
+    align-items:center;
+  }
+  footer a{
+    color:var(--text-muted);
+    text-decoration:none;
+    border-bottom:1px solid var(--border);
+  }
+  footer a:hover{color:var(--accent); border-color:var(--accent);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Interview Prep · Microsoft 365 &amp; Power Platform</div>
+    <h1>SharePoint &amp; Power Platform<br><span class="dim">Interview Question Bank</span></h1>
+    <p class="lede">
+      <strong>353 questions</strong>, split into eleven topic pages and tiered from beginner to expert —
+      plus dedicated scenario-based rounds for real architecture and troubleshooting problems.
+      Built for interview prep, screening, or just leveling up.
+    </p>
+    <div class="stat-row">
+      <div class="stat"><span class="num">353</span><span class="label">Total Questions</span></div>
+      <div class="stat"><span class="num">11</span><span class="label">Topic Pages</span></div>
+      <div class="stat beginner"><span class="num">57</span><span class="label">Beginner</span></div>
+      <div class="stat intermediate"><span class="num">64</span><span class="label">Intermediate</span></div>
+      <div class="stat advanced"><span class="num">42</span><span class="label">Advanced</span></div>
+      <div class="stat expert"><span class="num">35</span><span class="label">Expert</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="b"></i>Beginner</span>
+      <span><i class="i"></i>Intermediate</span>
+      <span><i class="a"></i>Advanced</span>
+      <span><i class="e"></i>Expert</span>
+      <span>+ Quick-Fire &amp; Scenario rounds on every page</span>
+    </div>
+  </header>
+
+  <section class="grid-section">
+    <p class="section-title">// Browse by topic</p>
+    <div class="grid" id="topic-grid"></div>
+  </section>
+
+  <footer>
+    <div class="foot-row">
+      <span>Educational / interview-preparation resource. PRs welcome.</span>
+      <span>
+        <a href="https://github.com/Rahul7387/sharepoint-power-platform-interview-questions" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </span>
+    </div>
+  </footer>
+</div>
+
+<script>
+const REPO = "https://github.com/Rahul7387/sharepoint-power-platform-interview-questions/blob/main/topics/";
+
+// counts: [beginner, intermediate, advanced, expert, quickfire, scenario]
+const topics = [
+  { n:"01", file:"01-sharepoint.md", title:"SharePoint", desc:"Architecture, admin, governance, and out-of-box customization.", counts:[7,8,5,4,10,4] },
+  { n:"02", file:"02-spfx.md", title:"SPFx", desc:"Web parts, extensions, tooling, ALM, and performance.", counts:[6,7,5,4,10,4] },
+  { n:"03", file:"03-power-apps-canvas.md", title:"Power Apps — Canvas Apps", desc:"Delegation, formulas, offline design, componentization.", counts:[6,7,4,4,10,4] },
+  { n:"04", file:"04-power-apps-model-driven.md", title:"Power Apps — Model-Driven & Dataverse", desc:"Security roles, plugins, business logic, solutions.", counts:[6,7,5,4,10,4] },
+  { n:"05", file:"05-power-automate-cloud.md", title:"Power Automate — Cloud Flows", desc:"Triggers, error handling, licensing, concurrency, ALM.", counts:[6,7,4,4,10,4] },
+  { n:"06", file:"06-power-automate-desktop.md", title:"Power Automate — Desktop (RPA)", desc:"Selectors, attended/unattended automation, resilience.", counts:[5,6,4,3,10,4] },
+  { n:"07", file:"07-ai-builder.md", title:"AI Builder", desc:"Prebuilt & custom models, credits, confidence handling.", counts:[5,5,3,3,10,3] },
+  { n:"08", file:"08-copilot-studio.md", title:"Copilot / Copilot Studio", desc:"Topics, generative answers, actions, governance.", counts:[5,5,4,3,10,3] },
+  { n:"09", file:"09-power-pages.md", title:"Power Pages", desc:"Authentication, table permissions, external-site security.", counts:[5,5,4,3,10,3] },
+  { n:"10", file:"10-power-bi.md", title:"Power BI", desc:"DAX, data modeling, RLS, gateways, deployment pipelines.", counts:[6,7,4,3,10,4] },
+];
+
+const scenarioTopic = { n:"11", file:"11-scenario-based.md", title:"Scenario-Based (Cross-Topic)", desc:"18 real-world architecture & troubleshooting scenarios spanning every technology above — the kind asked at consultant/architect level.", counts:[0,0,0,0,0,18] };
+
+function renderBar(counts){
+  const [b,i,a,e,qf,sc] = counts;
+  const total = b+i+a+e || 1; // guard div by zero for scenario-only page
+  const segs = [
+    {cls:'b', v:b}, {cls:'i', v:i}, {cls:'a', v:a}, {cls:'e', v:e}
+  ];
+  return segs.map(s => `<span class="${s.cls}" style="width:${(s.v/total*100).toFixed(1)}%"></span>`).join('');
+}
+
+function totalOf(counts){ return counts.reduce((x,y)=>x+y,0); }
+
+function cardHTML(t, isScenario){
+  const bar = isScenario ? '' : `<div class="diff-bar">${renderBar(t.counts)}</div>`;
+  return `
+    <a class="card${isScenario ? ' scenario' : ''}" href="${REPO}${t.file}" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="card-index">${t.n} /</span>
+        <span class="card-count">${totalOf(t.counts)} questions</span>
+      </div>
+      <h3 class="card-title">${t.title}</h3>
+      <p class="card-desc">${t.desc}</p>
+      ${bar}
+      <div class="card-footer">
+        <span>${t.file}</span>
+        <span class="go">Open →</span>
+      </div>
+    </a>`;
+}
+
+const gridEl = document.getElementById('topic-grid');
+gridEl.innerHTML = topics.map(t => cardHTML(t, false)).join('') + cardHTML(scenarioTopic, true);
+</script>
+
+</body>
+</html>
